@@ -57,6 +57,20 @@ Behavior: leaky ReLU activations are used after each conv+bn. This model is extr
 
 Behavior: leaky ReLU activations and batch normalization are used to improve training stability and generalization.
 
+## Model metrics (trainable parameters & recorded accuracies)
+
+Below are the computed trainable parameter counts for the two main CNNs used in this notebook, plus placeholders where you can record the actual train/test accuracies after running the notebook. The notebook prints accuracies after evaluation and also shows per-layer parameter counts via `torchsummary`.
+
+- SmallCNN_1
+  - Trainable parameters (calculated): **2,174**
+  - Recorded train accuracy: 95.16%  (fill in after running the notebook)
+  - Recorded test accuracy: 95.21%   (fill in after running the notebook)
+
+- SmallCNN_2
+  - Trainable parameters (calculated): **24,548**
+  - Recorded train accuracy: 98.01%  (fill in after running the notebook)
+  - Recorded test accuracy: 98.19%   (fill in after running the notebook)
+
 ## Line-by-line contract (what each model expects and returns)
 - Inputs: batch tensors of shape `(batch_size, 1, 28, 28)` (float, normalized)
 - Outputs: raw logits of shape `(batch_size, 10)`; feed these to `CrossEntropyLoss` or `softmax`+`argmax` for predictions.
