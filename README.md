@@ -57,9 +57,6 @@ Behavior: leaky ReLU activations are used after each conv+bn. This model is extr
 
 Behavior: leaky ReLU activations and batch normalization are used to improve training stability and generalization.
 
-### (Earlier simple SmallCNN example)
-There is also a `SmallCNN` example (2 conv layers → 2 FCs) used earlier in the notebook illustrating the classic conv → pool → conv → pool → flatten → FC flow.
-
 ## Line-by-line contract (what each model expects and returns)
 - Inputs: batch tensors of shape `(batch_size, 1, 28, 28)` (float, normalized)
 - Outputs: raw logits of shape `(batch_size, 10)`; feed these to `CrossEntropyLoss` or `softmax`+`argmax` for predictions.
